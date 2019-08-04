@@ -1,0 +1,11 @@
+<div>
+    <h1>Upcoming Events</h1>
+    <h4>You got your component to display!</h4>
+    <hr>
+    <div class="row">
+      <div *ngFor="let event of events" class="col-md-5">
+        <app-event-tumbnail [event]="event"></app-event-tumbnail>
+      </div>
+    </div>
+  
+  </div>

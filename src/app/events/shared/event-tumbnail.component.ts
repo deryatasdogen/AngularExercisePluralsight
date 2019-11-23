@@ -3,8 +3,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
     selector: 'app-event-tumbnail',
     template: `
+  <div [routerLink]="['/events',event.id]">
     <div style="margin-top:30px">
-    Event: {{event?.name}}
+    <h2>Event: {{event?.name}}</h2>
   </div>
   <div>
     Date: {{event.date}}
@@ -19,6 +20,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
     Address: {{event?.location?.address}}, {{event?.location?.city}}, {{event?.location?.country}}
     </div>
     <div [hidden]="!event?.onlineUrl" >Online Url: {{event?.onlineUrl}}</div>
+  </div>
 `,
     styles: [ `
       .green { color: #003300 !important; }
